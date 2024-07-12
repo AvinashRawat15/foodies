@@ -7,6 +7,11 @@
     display: grid;
 }
 
+.continue{
+    position: relative;
+    top: 4px;
+}
+
 .login-container{
     place-self: center;
     width: max(23vw, 330px);
@@ -62,7 +67,7 @@
     margin-top: -15px;
 }
 .login-condition input{
-    margin-top: 3px;
+    margin-top: 5px;
 }
 .Login p span{
     color: tomato;

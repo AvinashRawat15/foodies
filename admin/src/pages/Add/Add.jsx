@@ -4,8 +4,9 @@ import { assets } from "../../assets/assets";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-const Add = ({url}) => {
+const Add = ({ url }) => {
   const [image, setImage] = useState(false);
+
   const [data, setData] = useState({
     name: "",
     description: "",
@@ -16,7 +17,7 @@ const Add = ({url}) => {
   const onChangeHandler = (event) => {
     const name = event.target.name;
     const value = event.target.value;
-    setData((data) => ({ ...data, [name]: value }));
+    setData(data=>({...data,[name]:value}))
   };
 
   const onSubmitHandler = async (event) => {
@@ -38,7 +39,7 @@ const Add = ({url}) => {
       setImage(false)
       toast.success(response.data.message)
     } else {
-        toast.error(response.data.message)
+      toast.error(response.data.message)
     }
   };
 
@@ -47,19 +48,11 @@ const Add = ({url}) => {
       <form className="flex-col" onSubmit={onSubmitHandler}>
         <div className="add-img-upload flex-col">
           <p>Upload Image</p>
-          <label htmlFor="image">
-            <img
-              src={image ? URL.createObjectURL(image) : assets.upload_area}
-              alt=""
-            />
+          <label htmlFor="image">       
+          <img src={image ? URL.createObjectURL(image) : assets.upload_area} alt="" />
           </label>
           <input
-            onChange={(e) => setImage(e.target.files[0])}
-            type="file"
-            id="image"
-            hidden
-            required
-          />
+            onChange={(e) => setImage(e.target.files[0])} type="file" id="image" hidden required /> 
         </div>
         <div className="add-product-name flex-col">
           <p>Product Name</p>
@@ -85,7 +78,7 @@ const Add = ({url}) => {
         <div className="add-category-price">
           <div className="add-category flex-col">
             <p>Product Category</p>
-            <select name="category">
+            <select name="category" onChange={onChangeHandler}>
               <option value="Salad"></option>
               <option value="Rolls"></option>
               <option value="Deserts"></option>

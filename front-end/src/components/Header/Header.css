@@ -16,6 +16,9 @@
     bottom: 10%;
     left: 6vw;
     animation: fadeIn 3s;
+
+    /* justify-content: center;
+    flex-direction: column; */
 }
 
 .header-contents h2 {
@@ -42,15 +45,10 @@
     cursor: pointer;
 }
 
-:root .buttonwl {
-    color: black;
-}
-
-.lightcolors .buttonwl {
-    color: #747474;
-}
-
 @media(max-width:1050px){
+    .header{
+        height:38vw;
+    }
     .header-contents{
         max-width: 45%;
     }

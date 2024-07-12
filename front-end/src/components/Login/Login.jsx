@@ -5,11 +5,15 @@ import { StoreContext } from "../../context/StoreContext";
 import axios from "axios"
 
 const Login = ({ setShowLogin }) => {
+
   const {url,setToken}= useContext(StoreContext)
+
   const [currentState, setCurrentState] = useState("Login");
+
   const [data,setData]= useState({
     name:"",email:"",password:""
   })
+
   const onChangeHandler=(event)=>{
     const name=event.target.name
     const value=event.target.value
@@ -61,7 +65,7 @@ const Login = ({ setShowLogin }) => {
         </button>
         <div className="login-condition">
             <input type="checkbox" required />
-            <p>By continuing, I agree to the terms of use and privacy policy.</p>
+            <p className="continue">By continuing, I agree to the terms of use and privacy policy.</p>
         </div>
         {currentState==="Login"?<p>Create a new account? <span onClick={() => setCurrentState("Sign-Up")}>Sign Up</span></p>:<p>Already a user?<span onClick={() => setCurrentState("Login")}> Login Here</span></p>}
         

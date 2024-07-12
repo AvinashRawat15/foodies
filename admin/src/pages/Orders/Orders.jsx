@@ -3,7 +3,7 @@ import "./Order.css";
 import axios from "axios";
 import { useState } from "react";
 import { toast } from "react-toastify";
-import assets from "../../assets/assets";
+// import assets from "../../assets/assets";
 
 const Orders = ({ url }) => {
   const [Orders, setOrders] = useState([]);
