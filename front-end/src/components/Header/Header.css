@@ -1,7 +1,7 @@
 .header {
     height: 34vw;
     margin: 30px auto;
-    background: url('/header_img.png') no-repeat center;
+    background: url('/header_img.png') no-repeat ;
     background-size: contain;
     position: relative;
 }
@@ -16,9 +16,6 @@
     bottom: 10%;
     left: 6vw;
     animation: fadeIn 3s;
-
-    /* justify-content: center;
-    flex-direction: column; */
 }
 
 .header-contents h2 {

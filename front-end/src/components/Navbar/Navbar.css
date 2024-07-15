@@ -20,7 +20,7 @@
     align-items: center;
     gap: 40px;
 }
-.navbar-button{
+.navbar button{
     background: transparent;
     font-size: 15px;
     color: #49557e;
